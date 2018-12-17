@@ -68,6 +68,8 @@ print(data[10])
 # standard deviation across channels.
 gfp = evoked.copy().pick_types(eeg=True, meg=False).data.std(0)
 plt.plot(evoked.times, gfp)
+plt.xlabel("Time (s)")
+plt.ylabel("GFP")
 
 ###############################################################################
 # If you want to import evoked data from some other system and you have it in a
